@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Marker App</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h2>Location Marker App</h2>
+  
+  <label for="location">Enter Your Location:</label>
+  <input type="text" id="location" placeholder="Type your location">
+
+  <label for="description">Location Description:</label>
+  <textarea id="description" placeholder="Describe your location"></textarea>
+
+  <button onclick="markLocation()">Mark Location</button>
+
+  <div id="map"></div>
+
+  <script>
+    function markLocation() {
+      var locationInput = document.getElementById("location").value;
+      var descriptionInput = document.getElementById("description").value;
+
+      // You would typically use the Google Maps API here to mark the location.
+      // This example just shows an alert with the input data.
+      alert("Location: " + locationInput + "\nDescription: " + descriptionInput);
+    }
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlg0-W7YQUNuuBPknP4of-wOdVxhWbPRE&callback=initMap"></script>
+</body>
+</html>
